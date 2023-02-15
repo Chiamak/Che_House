@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ORDER | CHE_HOUSE</title>
+	<link rel="stylesheet" type="text/css" href="./css/order.css">
+	<link rel="icon" type="image/png" href="./Images/kreeps.png">
+</head>
+<body>
+	<div class="header">
+        <div class="header-1">
+            <nav class="flex">
+                <img src="./Images/logo1.png" class="logo">
+                <ul class="menu-bar">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html/#menu">MENU</a></li>
+                    <li><a href="Order.html">ORDER NOW</a></li>
+                    <li><a href="target_blank"><img src="./Images/carts.png" class="cat"></a></li>
+                </ul>
+            </nav>
+            <p>
+                <span class="typed-text"></span>
+                <span class="cursor typing">&nbsp;</span>      
+            </p>
+        </div>
+	</div>
+    <div class="opaque1"></div>
+    <div class="menubg">
+        
+    </div>
+	<div class="formula">
+        <div class="o-form">
+            <h1>FOOD ORDER FORM</h1>
+            <div id="formgrp">
+                <div class="pagination">
+                    <div class="progress"></div>
+                  <span class="step">Step 1</span>
+                  <span class="step"> Step 2</span>
+                  <span class="step">Step 3</span>
+                </div>
+                <p><span class="error" id="error">* required</span></p>
+                <div id="formgrp1">
+                    <form id="Form1" class="form" name="myForm">
+                            <label for="user">Name</label>
+                            <input type="text" name="info" id="user" value="" required >
+                            <span class="error">* </span>
+                            <label for="mail">Email</label>
+                            <input type="email" name="info" id="mail" value="" required >
+                            <span class="error">* </span> 
+                            <label for="address">Where are you</label>
+                            <input type="text" name="info" id="address" value="" required >
+                            <span class="error">* </span>
+                            <label for="phone">Phone</label>
+                            <input type="number" name="info" id="phone" value="" required >
+                            <span class="error">* </span> 
+                            <div class="btngrp">
+                                <button type="button" class="next1" id="btn">Next</button>
+                            </div>
+                    </form>
+                    <form id="Form2" class="form">
+                        <h3>Noodles & Pasta</h3>
+                        <div class="opt" onclick="myOrder(event)">
+                                <input type="button" value="Stirfry Noodles"  name="800" id="or-der">
+                                <input type="button" value="Chicken Parmesan" name="800" id="or-der">
+                                <input type="button" value="Spaghetti Bolognaise" name="800" id="or-der">
+                                <input type="button" value="Creamy Mushroom Pasta" name="800" id="or-der">
+                                <input type="button" value="Chicken Pepper Noodles" name="800" id="or-der">
+                            <p>Quantity : <input type="number" name="number" placeholder="0" value=""></p>
+                        </div>
+                        
+                        <hr>
+
+                        <h3>Pizza Toppings</h3>
+                        <div class="opt"onclick="myOrder(event)">
+                                <input type="button" value="Toppings" name="800" id="or-der">
+                                <input type="button" value="Mushroom" name="800" id="or-der">
+                                <input type="button" value="Extra Cheese" name="800" id="or-der">
+                                <input type="button" value="Garlic" name="800" id="or-der">
+                            <p>Quantity : <input type="number" name="number" placeholder="0" value=""></p>
+                        </div>
+                        <hr>
+
+                        <h3>Pizza Crust</h3>
+                        <div class="opt" onclick="myOrder(event)">
+                                    <input type="button" value="Thick Crust For me" name="800" id="or-der">
+                                    <input type="button" value="Thin Crust For me" name="800" id="or-der">
+                                    <input type="button" value="Thick Crust Special" name="800" id="or-der">
+                                    <input type="button" value="Thick Crust Family Size" name="800" id="or-der">
+                                    <input type="button" value="Thin Crust Family Size" name="800" id="or-der">
+                                    <input type="button" value="Thin Crust Me and You" name="800" id="or-der">
+                                    <input type="button" value="Medium Size" name="800" id="or-der">
+                            <p>Quantity : <input type="number" name="number" placeholder="0" value=""></p>
+                        </div>
+
+                        <hr>
+
+                        <h3>Big Bite</h3>
+                        <div class="opt" onclick="myOrder(event)">
+                                <input type="button" value="Fried Chicken" name="800" id="or-der">
+                                <input type="button" value="Baked Chicken" name="800" id="or-der">
+                                <input type="button" value="Grilled Chicken" name="800" id="or-der">
+                                <input type="button" value="Sauteed Chicken" name="800" id="or-der">
+                                <input type="button" value="Beef Mix" name="800" id="or-der">
+                                <input type="button" value="Grilled Fish {Full}" name="800" id="or-der">
+                                <input type="button" value="Grilled Fish {Piece}" name="800" id="or-der">
+                            <p>Quantity : <input type="number" name="number" placeholder="0" value=""></p>
+                        </div>
+
+                        <hr>
+
+                        <h3>Barbecue</h3>
+                        <div class="opt" onclick="myOrder(event)" >
+                                <input type="button" value="Marinated Chicken" name="800" id="or-der">
+                                <input type="button" value="American Barbecue Roast" name="800" id="or-der">
+                                <input type="button" value="Pulled Pork Sandwich" name="800" id="or-der">
+                            <p>Quantity : <input type="number" name="number" placeholder="0" value=""></p>
+                        </div>
+
+                        <hr>
+
+                        <h3>Ice Cream Flavours</h3>
+                        <div class="opt" onclick="myOrder(event)">
+                                <input type="button" value="Vanilla" name="800" id="or-der">
+                                <input type="button" value="Chocolate" name="800" id="or-der">
+                                <input type="button" value="Orange"name="800" id="or-der">
+                                <input type="button" value="Pineapple" name="800" id="or-der">
+                                <input type="button" value="Strawberry"name="800" id="or-der">
+                                <input type="button" value="Papaya"name="800" id="or-der">
+                                <input type="button" value="Banana"name="800" id="or-der">
+                                <input type="button" value="Lemon"name="800" id="or-der">
+                                <input type="button" value="Mango & Banana Delight" name="800" id="or-der">
+                                <input type="button" value="Ice Cream Cake" name="800" id="or-der">
+                            <p>Quantity : <input type="number" name="number" placeholder="0" value=""></p>
+                        </div>
+
+                        <hr>
+
+                        <h3>Ice Cream Toppings</h3>
+                        <div class="opt" onclick="myOrder(event)">
+                                <input type="button" value="Cookies" name="800" id="or-der">
+                                <input type="button" value="Sprinkles" name="800" id="or-der">
+                                <input type="button" value="Nuts" name="800" id="or-der">
+                                <input type="button" value="Cherry" name="800" id="or-der">
+                                <p>Quantity : <input type="number" name="number" placeholder="0" value=""></p>
+                        </div> 
+
+                        <hr>
+
+                        <h3>Specials</h3>
+                        <div class="opt" onclick="myOrder(event)">
+                                <input type="button" value="Spaghetti Puttanesca" name="800" id="or-der">
+                                <input type="button" value="Butterscotch Extra Cream" name="800" id="or-der">
+                            <p>Quantity : <input type="number" name="number" placeholder="0" value=""></p>
+                        </div>
+                        <div class="btngrp">
+                            <button type="button" class="prev1" id="btn">Prev</button>
+                            <button type="button" class="next2" id="btn">Next</button>
+                        </div> 
+                    </form>
+                    <div id="Form3" class="form">
+                        <h2>Review</h2>
+                        <div class="del">  
+                            <ul class="goods">
+                                
+                            </ul>
+                            <ul class="price">
+                               
+                            </ul>
+                        </div>
+                        <div class="btngrp">
+                            <button type="button" class="prev2" id="btn">Prev</button>
+                            <button type="submit" class="submit" id="btn">Submit</button>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+                    
+        <div class="order-form">
+                    
+        </div>
+    </div>         
+
+
+            <script src="./js/textdelay.js"></script>
+            <script src="./js/form.js"></script>
+</body>
+</html>

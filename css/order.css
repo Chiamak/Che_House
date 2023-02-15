@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita&family=Permanent+Marker&family=Poppins:wght@300&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&family=Sansita+Swashed:wght@300&family=Source+Sans+Pro:wght@300&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Handlee&family=Inter+Tight:wght@200&family=Just+Another+Hand&family=Patrick+Hand&family=Peralta&display=swap');
+body{
+	margin: 0 auto;
+	background-color: orangered;
+}
+.cat{
+    width: 30px;
+    height: 30px;
+    animation-name: pushforward;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    /*transition: all 0.5s ease;*/
+    animation-direction: alternate-reverse;
+}
+@keyframes pushforward{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(20px);
+    }
+}
+.header{
+	background-image: url('../Images/soop (1).jpg');
+	background-position:center right ;
+	background-size: cover;
+   width: 100%;
+    height: 70vh;
+}
+.header-1{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80%;
+    z-index: 2;
+}
+.header-1 .flex{
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.flex .logo{
+    width: 180px;
+    height: 80px;
+    margin-left: 8%;
+}
+.flex .menu-bar{
+    margin-left: 40%;
+    display: flex;
+    list-style-type: none;
+}
+.menu-bar li{
+    padding: 2px 30px;
+    font-family: Roboto Condensed;
+    font-size: 16px;
+    /*font-weight: bolder;*/
+}
+.menu-bar li a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.menu-bar li a:hover{
+    color: orange;
+}
+.header-1 p{
+	text-align: center;
+	font-size: 90px;
+    font-weight: bolder;
+	font-family: Gemunu Libre;
+    letter-spacing: 5px;
+	/*color: floralwhite;*/
+    background:linear-gradient(to right, whitesmoke,orangered,red,orange,red, orangered, whitesmoke ) ;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent ;
+}
+.header-1 p .cursor {
+  display: inline-block;
+  width: 5px;
+  background-color: red;
+  /*margin-left: 0.1rem;*/
+  animation: blink 1s infinite;
+}
+.cursor .typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: transparent;
+  }
+  75% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: red;
+  }
+}
+.opaque1{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70vh;
+    background-color: black;
+    z-index: 1;
+    opacity: 0.2;
+}
+.menubg{
+    margin:1vh 0;
+    background-image: url("../Images/menu.PNG");
+    width: 100%;
+    height: 139vh;
+    background-size: cover;
+}
+.formula{
+    /*position: relative;*/
+    width: 70%;
+    margin: 3% 15%;
+    height: fit-content;
+    display: flex;
+    box-shadow:3px 2px 3px 2px black;
+}
+.formula .o-form{
+    padding: 15px;
+    width: 50%;
+    background-color: lightyellow;
+    /*box-sizing: border-box;*/
+}
+.o-form h1{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 40px;
+    font-family: Gemunu Libre;
+    color: orangered;
+}
+.o-form #formgrp .pagination{
+    position: relative;
+    display:flex;
+    margin: 0 auto;
+    /*justify-content: center;*/
+    align-items: center;
+    /* box-shadow: 0 -1px 5px -1px #000; */
+}
+.pagination .step{
+    position: relative;
+    color: bisque;
+    font-family: gabriola;
+    font-weight: bolder;
+    font-size: 23px;
+    text-align: center;
+    width: 30%;
+}
+.pagination .progress{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    background-color: orangered;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 16px;
+    transition: all 0.5s ease;
+}
+.progress::after{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 0;
+    border-block: 20px solid transparent;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid transparent;
+}
+.error{
+    color: red;
+}
+#formgrp1{
+    position: relative;
+    height: 70vh;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+     /* scroll-snap-type: mandatory; */
+}
+#formgrp1::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+} 
+#formgrp1 .form{
+    position: absolute;
+    top: 0;
+    transition: all 0.5s ease;
+}
+#Form1, #Form2{
+    margin-top: 5vh;
+    width: 100%;
+}
+#Form1 label{
+    font-size: 18px;
+    color: orange;
+    font-family: poppins;
+    font-weight: bold;
+}
+#Form1 input{
+    margin: 5px 0;
+    width: 95%;
+    height: 30px;
+    background-color: bisque;
+    color: orangered;
+    border: none;
+    box-shadow: rgb(0, 0, 0, 0.44) 0px 4px 4px;
+}
+#Form2{
+    line-height: 10px;
+   left: 473px;
+   /* height:190vh; */
+}
+#Form2 h3{
+    text-align: center;
+    color: orangered;
+    font-size: 35px;
+    font-family: Just Another Hand;
+}
+#Form2 .opt{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-basis: 50%;
+    flex-wrap: wrap;
+}
+#Form2 .opt input{
+    width: 40%;
+    height: 4vh;
+    /* padding: 1px; */
+    border: none;
+    background-color: wheat;
+    font-size: 18px;
+    color: darkorange;
+    margin:1vh 0%;
+    font-family: gabriola;
+}
+#Form2 .opt p{
+    color: orangered;
+    font-size: 20px;
+}
+#Form2 .opt p input[type = "number"]{
+    width: 15%;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    height: 3vh;
+    background-color: orange;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#Form3{
+    left: 473px;
+    margin-top: 10vh;
+    width: 100%;
+}
+#Form3 h2{
+    font-size: 35px;
+    font-family: Gemunu Libre;
+    text-align: center;
+}
+#Form3 .del{
+    width: 100%;
+    margin: 1% 0%;
+    background-color: wheat;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.del ul{
+    margin-left: -50px;
+    list-style-type: none;
+}
+.del .goods li{
+    font-size: 13px;
+    color: orangered;
+    font-family: poppins;
+    font-weight: bolder;
+    padding: 3px 30px;   
+    /* list-style: none;  */
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px ;
+    background-image: url('../Images/kiss (1).png');
+}
+.del .price li{
+    font-size: 13px;
+    color: orangered;
+    font-family: poppins;
+    font-weight: bolder;
+    padding: 3px 30px;  
+}
+.btngrp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#btn{
+    background-color:orangered;
+    /*width: 80px;*/
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    color: bisque;
+    font-family: poppins;
+    font-size: 15px;
+    margin: 4vh 3%;
+}
+.formula .order-form{
+    width: 50%;
+    background-image: url('../Images/soop (4).jpg');
+    background-size: cover;
+    background-position: center;
+}

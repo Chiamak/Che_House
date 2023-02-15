@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita&family=Permanent+Marker&family=Poppins:wght@300&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&family=Sansita+Swashed:wght@300&family=Source+Sans+Pro:wght@300&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Handlee&family=Inter+Tight:wght@200&family=Just+Another+Hand&family=Patrick+Hand&family=Peralta&display=swap');
+body{
+    margin: 0 auto;
+    background-color: orangered;
+}
+.header{
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+}
+.cat{
+    width: 30px;
+    height: 30px;
+    animation-name: pushforward;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    /*transition: all 0.5s ease;*/
+    animation-direction: alternate-reverse;
+}
+@keyframes pushforward{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(20px);
+    }
+}
+.header .flex{
+    display: flex;
+    padding: 20px;
+}
+.flex .logo{
+    width: 180px;
+    height: 80px;
+    margin-left: 8%;
+}
+.flex .menu-bar{
+    margin-left: 35%;
+    display: flex;
+    list-style-type: none;
+}
+.menu-bar li{
+    padding: 2px 30px;
+    font-family: Roboto Condensed;
+    font-size: 16px;
+}
+.menu-bar li a{
+    color: whitesmoke;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.menu-bar li a:hover{
+    color: orange;
+}
+.team{
+    text-align: center;
+    margin-top:15vh;
+}
+.team .blush {
+    width: 300px;
+    height: 150px;
+    margin-top: -20vh;
+}
+.team h1{
+    font-size: 35px;
+    font-family: poppins;
+    line-height: 1px;
+    color: white;
+}
+.team h3{
+    font-size: 80px;
+    font-family: poppins;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    /*line-height: 1px;*/
+    margin-top: 0;
+    background:linear-gradient(to right, whitesmoke,orangered,red,orange,red, orangered, whitesmoke ) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.team p{
+    font-size: 18px;
+    font-family:Sansita Swashed ;
+    color: white;
+}
+.slide{
+    position: absolute;
+    top: 0;
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+.slide div{
+    width: 100%;
+    height: 100vh;
+    animation-name: slider;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease;
+    /*animation-direction: alternate-reverse;*/
+    animation-delay: 10s;
+    transition: all 0.5 ease;
+}
+@keyframes slider{
+    0%{
+        transform: translateY(0%);
+    }
+    25%{
+        transform: translateY(-100%);
+    }
+    50%{
+        transform: translateY(-200%);
+    }
+    75%{
+        transform: translateY(-300%);
+    }
+    100%{
+        transform: translateY(-300%);
+    }
+}
+.slide .d1{
+    background-image: url("../Images/kobby.jpg");
+    background-size: cover;
+}
+.slide .d2{
+     background-image: url("../Images/meat (3).jpg");
+    background-size: cover;
+    /*background-position: center;*/
+}
+.slide .d3{
+     background-image: url("../Images/anna.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.slide .d4{
+     background-image: url("../Images/feast.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.opaque{
+    position: absolute;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    z-index: 2;
+}
+.container{
+    position: absolute;
+    top:96vh ;
+    width: 85%;
+    background-color: white;
+    margin: 0 7.5%;
+    z-index: 4;
+    /*height: 250vh;*/
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    overflow-x:hidden ;
+}
+.container .about{
+    width: 80%;
+    margin: 3% 10%;
+    border-bottom: 5px solid orangered ;
+    border-top: 5px solid orangered;
+    display: flex;
+
+}
+.about .about1{
+    margin: 10px;
+    width: 55%;
+}
+.about .about1 h2{
+    font-size: 40px;
+    font-family: Roboto Condensed;
+}
+.about .about1 img{
+    width:90% ;
+    margin:1vh 0%;
+    height: 50vh;
+    box-shadow: rgb(0, 0, 0, 0.54) 1px 6px 6px;
+}
+.container .about p{
+    width: 45%;
+    font-size: 16px;
+    font-family: poppins;
+    color: grey;
+    font-weight: bolder;
+}
+.container .menu{
+    position: relative;
+    /*position: fixed;*/
+    background-image: url("../Images/heers.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    height: 110vh;
+    margin: 0vh 0%;
+    margin-top:10vh ;
+    /*padding: 10vh 0;*/
+    /*z-index: -1;*/
+}
+.opaque1{
+    position: absolute;
+    background-color: black;
+    height: 110vh;
+    top: 0;
+    width: 100%;
+    opacity: 0.4;
+    z-index: 1;
+}
+.menu .menuhead{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 110vh;
+    padding: 7vh 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+.menuhead h1{
+    color: orangered;
+    font-family:Handlee;
+    font-weight: bolder;
+    font-size: 45px; 
+    text-shadow: 1px 2px 2px black;
+}
+.menu .menuhead .brush{
+    width: 300px;
+    height: 150px;
+    margin-top: -11vh;
+}
+.menuhead .menubody{
+    display: flex;
+}
+.menuhead .menubody div{
+    width: 40%;
+    height: 70vh;
+    /*border: 1px solid white;*/
+    margin: 1vh 1.5%;
+    background-image: url('../Images/sroll80.png');
+    background-size: cover;
+}
+.menubody .menubod1, .menubod2, .menubod3{
+    padding: 10px 0px;
+    padding-top: 40px;
+    box-sizing: border-box;
+    line-height: 22px;
+}
+.menubod1 h3, .menubod2 h3, .menubod3 h3{
+    color: orangered;
+    font-size: 35px;
+    font-family: Just Another Hand;
+}
+.menubod1 .noodles,  .menubod2 .bbq, 
+.menubod3 .ic{
+    margin-left: 20px;
+    text-align: left;
+}
+.menubod1 .pasta,.menubod2 .pizza, .menubod3 .cc{
+    margin-left: 13px;
+    text-align: left;
+}
+.menubod1 .noodles li,.menubod1 .pasta li,
+ .menubod2 .bbq li, .menubod2 .pizza li,
+ .menubod3 .ic li, .menubod3 .cc li{
+    font-size: 16px;
+    color: rgb(54, 69, 79);
+    font-family: poppins;
+    font-weight: bolder;
+    padding: 3px 35px;   
+    list-style: none; 
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px 
+}
+.menubod1 .noodles li{
+    background-image: url("../Images/kind.png");
+}
+.menubod1 .pasta li{
+    background-image: url("../Images/ping.png");
+}
+.menubod2 .bbq li{
+    background-image: url("../Images/kiss (1).png");
+}
+.menubod2 .pizza li{
+    background-image: url("../Images/pizza.png");
+}
+.menubod3 .ic li{
+    background-image: url("../Images/kiss (2).png");
+}
+.menubod3 .cc li{
+    background-image: url("../Images/topp.png");
+}
+.animate{
+    width: 100%;
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+    padding:35px 10px;
+    box-sizing: border-box;
+    background:linear-gradient(to right,darkorange, orangered,coral,darkorange, chocolate, orangered,darkorange,coral) ;
+}
+.animate .videos{
+    width: 51%;
+    border: 1px inset white;
+    box-shadow: rgb(0, 0, 0, 0.74) 1px 5px 7px;
+    height:100%;
+}
+.animate .discount{
+    position: relative;
+    width: 49%;
+    margin: 0.5%;
+    display: flex;
+    /*height: 400px;*/
+}
+.discount .imgz{
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    margin-top: 1.2vh;
+    left: 16%;
+    /*-webkit-box-reflect: left;*/
+    transform: scaleX(-1);
+    background-attachment: fixed;
+}
+.discount .discount-1{
+    text-align: center;
+    /*line-height: 10px;*/
+    margin-left: 3%;
+}
+.discount-1 h3{
+    font-size: 70px;
+    font-family: Gemunu Libre;
+    color: orange;
+    line-height: 1px;
+}
+.discount-1 h3 #balad{
+    font-size: 90px;
+    color: floralwhite;
+    font-family: Ubuntu;
+}
+.discount-1 .prize{
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+    margin-top: -7vh;
+}
+.discount-1 .prize .imgs{
+    width: 90px;
+    height: 90px;
+    animation: 1s big ease-in-out infinite alternate-reverse;
+    transition: all 2s ease;
+}
+@keyframes big{
+    from{
+        transform: scale(0.9);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.discount-1 .prize .prized{
+    display: flex;
+    
+}
+.discount-1 .prize .prized h1{
+    font-size: 70px;
+    color: white;
+    font-family:Gemunu Libre ;
+}
+.prize .prized h4{
+    font-size: 35px;
+    color: darkred;
+    font-family: Gemunu Libre;
+    line-height: 38px;
+}
+.discount-1 h2{
+    font-family: Ubuntu;
+    font-size: 30px;
+    color: orange;
+    margin-top: -3vh;
+}
+.discount-1 h2 #beled{
+    font-size: 40px;
+    font-family: Gemunu Libre;
+    color: floralwhite;
+}
+.discount-1 p{
+    font-family: Poppins;
+    font-size: 18px;
+    color:rgb(54, 69, 79) ;
+}
+.footer{
+    position: absolute;
+    background-color: #131313;
+    z-index: 4;
+    width: 100%;
+    height: 13vh;
+    top:382vh ;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer .log{
+    width: 130px;
+    height: 60px;
+}
+.footer .media{
+    text-align: center;
+}
+.media ul{
+    display: flex;
+}
+.media ul a {
+    width: 45px;
+    height: 30px;
+    /*border: 1px solid white;*/
+    margin: 0 4%;
+}
+.media ul a img{
+    width: 100%;
+    height: 100%;
+}
+.footer p{
+    font-size: 17px;
+    font-family: poppins;
+    background:linear-gradient(to right, whitesmoke,orangered,red,orange,red, orangered, whitesmoke ) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.reveal{
+  position: relative;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+        #backtop {
+            position: fixed;
+            left:auto;right: 20px;top:auto;bottom: 20px;
+            outline: none;
+            overflow:hidden;
+            color:#fff;
+            text-align:center;
+            /*background-color:rgba(49,79,96,0.84);*/
+            height:50px;
+            width:50px;
+            line-height:40px;
+            font-size:14px;
+            border-radius:2px;
+            cursor:pointer;
+            transition:all 0.3s linear;
+            /*z-index:999999;*/
+
+            opacity:1;
+            display:none;
+        }
+        #backtop:hover {
+            background-color:orange;
+        }
+        #backtop.mcOut {
+            opacity:0;
+        }
+
+/*header nav a:hover,
+header nav a.active {
+  background: #00c2cb;
+  color: #42455a;
+  transition: 0.5s ease-out;
+  letter-spacing: 2px;
+}*/
